@@ -1,0 +1,11 @@
+
+language -> film
+film + actor -> film_actor
+film + category -> film_category
+country -> city -> address -> customer -> payment
+			   -> store
+			   -> staff -> store
+			            -> payment
+				    -> rental -> payment
+film -> inventory -> rental
+
