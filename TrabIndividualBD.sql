@@ -97,19 +97,20 @@ order by d.dep_nome asc;
 -- mostra todos os nomes dos funcionários e os respectivos departamentos.
 
 select
-	func_nome as "Nome do Funcionário", dep_id as "Número do Departamento" 
+	f.func_nome as "Nome do Funcionário", dep_id as "Número do Departamento" 
 from
 	funcionario f
 where dep_id > 0;
 
--- inner jjoin incompleto
+-- inner join que mostra qual o nome do funcionário que trabalha no departamento x e o nome do departamento.
 
 select
 	f.func_nome as "Nome do Funcionário", d.dep_nome as "Nome do Departamento"
 from
 	funcionario f
 inner join departamento d on
-	d.dep_id = f.func_id;
+	f.dep_id = d.dep_id 
+where d.dep_nome = :dep;
 
 -- mudar o tipo do dado para NOT NULL
 
