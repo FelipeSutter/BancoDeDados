@@ -86,9 +86,66 @@ values
 	('4','Pâmela Oliveira dos Santos','56939181067','73473-5645','30/06/2003'),
 	('5','Vitória Nielman','80268251010','43331-3155','08/11/1990'),
 	('5','Grace Millstone','35062313082','52988-0823','15/02/2007');
-	
-/*select
-	f.func_nome as "Nome do Funcionário", f.func_cpf as "CPF", d.dep_nome as "Nome do Departamento";
+
+-- mostra os departamentos em ordem crescente de nome.
+
+select
+	*	
+from departamento d
+order by d.dep_nome asc;
+
+-- mostra todos os nomes dos funcionários e os respectivos departamentos.
+
+select
+	func_nome as "Nome do Funcionário", dep_id as "Número do Departamento" 
 from
-	funcionario f;
-inner join*/
+	funcionario f
+where dep_id > 0;
+
+-- inner jjoin incompleto
+
+select
+	f.func_nome as "Nome do Funcionário", d.dep_nome as "Nome do Departamento"
+from
+	funcionario f
+inner join departamento d on
+	d.dep_id = f.func_id;
+
+-- mudar o tipo do dado para NOT NULL
+
+ALTER TABLE funcionario 
+ALTER COLUMN dep_id SET NOT NULL;
+
+-- atualizei o id do departamento
+
+update funcionario 
+	set dep_id = 1
+	where func_id = 1;
+
+update funcionario 
+	set dep_id = 1
+	where func_id = 2;
+
+update funcionario 
+	set dep_id = 2
+	where func_id = 3;
+
+update funcionario 
+	set dep_id = 2
+	where func_id = 4;
+
+update funcionario 
+	set dep_id = 3
+	where func_id = 5;
+
+update funcionario 
+	set dep_id = 4
+	where func_id = 6;
+
+update funcionario 
+	set dep_id = 5
+	where func_id = 7;
+
+update funcionario 
+	set dep_id = 5
+	where func_id = 8;
