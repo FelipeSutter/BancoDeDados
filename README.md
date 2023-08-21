@@ -23,6 +23,6 @@ além do ID único que identifica o departamento na empresa. Com base nisso, cri
 
 <h3><b>Conclusão:</b></h3>
 
-Mudei a chave estrangeira para o funcionário para poder saber em qual departamento ele pertence Exemplo do banco sendo executado:
+Mudei a chave estrangeira para o funcionário para poder saber em qual departamento ele pertence. Exemplo do banco sendo executado:
 
 <img src="exemploBancoIndividual.png" height="500" width="1000">
