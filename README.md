@@ -1,6 +1,6 @@
-<h1 align="center">Banco De Dados</h1>
+<h1 align="center">👨‍💻 Banco De Dados 👨‍💻</h1>
 
-<h2>Relacionamento entre funcionario - departamento</h2><br>
+<h2>Relacionamento entre funcionario - departamento</h2>
 
 <h3><b>Contexto:</b></h3>
 * Existem vários departamentos dentro de uma empresa de contabilidade. 
@@ -20,3 +20,7 @@ além do ID único que identifica o departamento na empresa. Com base nisso, cri
 <h3>Resultado final:</h3> <br>
 
 <img src="trabindividual.png">
+
+<h3><b>Conclusão:</b></h3>
+
+Mudei a chave estrangeira para o funcionário para poder saber em qual departamento ele pertence Exemplo do banco sendo executado:
