@@ -92,30 +92,45 @@ values
 select
 	*	
 from departamento d
-order by d.dep_nome asc;
+order by d.dep_tx_nome asc;
 
 -- mostra todos os nomes dos funcionários e os respectivos departamentos.
 
 select
-	f.func_nome as "Nome do Funcionário", dep_id as "Número do Departamento" 
+	f.func_tx_nome as "Nome do Funcionário", dep_int_id as "Número do Departamento" 
 from
 	funcionario f
-where dep_id > 0;
+where dep_int_id > 0;
 
 -- inner join que mostra qual o nome do funcionário que trabalha no departamento x e o nome do departamento.
 
 select
-	f.func_nome as "Nome do Funcionário", d.dep_nome as "Nome do Departamento"
+	f.func_tx_nome as "Nome do Funcionário", d.dep_tx_nome as "Nome do Departamento"
 from
 	funcionario f
 inner join departamento d on
-	f.dep_id = d.dep_id 
-where d.dep_nome = :dep;
+	f.dep_int_id = d.dep_cd_id 
+where d.dep_tx_nome = :dep;
 
 -- mudar o tipo do dado para NOT NULL
 
 ALTER TABLE funcionario 
 ALTER COLUMN dep_id SET NOT NULL;
+
+-- mudança dos nomes para incluir mnemônicos
+
+alter table departamento
+--rename column dep_id to dep_cd_id,
+rename column dep_tx_id to dep_tx_nome;
+--rename column dep_telefone to dep_tx_telefone;
+
+alter table funcionario 
+rename column func_id to func_cd_id;
+rename column func_nome to func_tx_nome;
+rename column func_cpf to func_tx_cpf;
+rename column func_telefone to func_tx_telefone;
+rename column func_data_nascimento to func_dt_data_nascimento;
+rename column dep_id to dep_int_id;
 
 -- atualizei o id do departamento
 
