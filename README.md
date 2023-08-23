@@ -16,11 +16,11 @@ além do ID único que identifica o departamento na empresa. Com base nisso, cri
 
 <h3><b>Modelo Lógico:</b></h3><br>
 
-<img src="ModeloRelacional.drawio.png"><br>
+<img src="ModeloLogico.drawio.png"><br>
 
 <h3>Resultado final:</h3> <br>
 
-<img src="trabindividual.png">
+<img src="ModeloFisico.png">
 
 <h3><b>Conclusão:</b></h3>
 
